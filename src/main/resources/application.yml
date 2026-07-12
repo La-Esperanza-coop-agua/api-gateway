@@ -1,0 +1,61 @@
+server:
+  port: 8000
+
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: reportes_route
+          uri: lb://reportes-service
+          predicates:
+            - Path=/api/v1/reportes/**
+
+        - id: facturacion_route
+          uri: lb://facturacion-service
+          predicates:
+            - Path=/api/v1/facturacion/**
+ 
+        - id: telemetria_route
+          uri: lb://telemetria-service
+          predicates:
+            - Path=/api/v1/telemetria/**
+
+        - id: incidencia_route
+          uri: lb://incidencia-service
+          predicates:
+            - Path=/api/v1/incidencias/**
+
+        - id: lectura_route
+          uri: lb://lectura-service
+          predicates:
+            - Path=/api/v1/lecturas/**
+
+        - id: pago_route
+          uri: lb://pago-service
+          predicates:
+            - Path=/api/v1/pagos/**
+
+        - id: balance_route
+          uri: lb://balance-service
+          predicates:
+            - Path=/api/v1/balances/**
+
+        - id: reparacion_route
+          uri: lb://reparacion-service
+          predicates:
+            - Path=/api/v1/reparaciones/**
+
+        - id: socios_route
+          uri: lb://socios-service
+          predicates:
+            - Path=/api/v1/socios/**
+
+        - id: notificacion_route
+          uri: lb://notificacion-service
+          predicates:
+            - Path=/api/v1/notificaciones/**
+
