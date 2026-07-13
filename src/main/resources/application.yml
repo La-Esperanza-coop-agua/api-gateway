@@ -11,7 +11,7 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id = true
+          lower-case-service-id: true
       routes:
         - id: reportes_route
           uri: lb://REPORTE-SERVICE
