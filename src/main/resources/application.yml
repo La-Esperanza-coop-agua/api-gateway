@@ -10,52 +10,52 @@ spring:
     gateway:
       routes:
         - id: reportes_route
-          uri: lb://reporte-service
+          uri: lb://REPORTE-SERVICE
           predicates:
             - Path=/api/v1/reportes/**
 
         - id: facturacion_route
-          uri: lb://facturacion-service
+          uri: lb://FACTURACION-SERVICE
           predicates:
             - Path=/api/v1/facturacion/**
  
         - id: telemetria_route
-          uri: lb://telemetria-service
+          uri: lb://TELEMETRIA-SERVICE
           predicates:
             - Path=/api/v1/telemetria/**
 
         - id: incidencia_route
-          uri: lb://incidencia-service
+          uri: lb://INCIDENCIA-SERVICE
           predicates:
             - Path=/api/v1/incidencias/**
 
         - id: lectura_route
-          uri: lb://lectura-service
+          uri: lb://LECTURA-SERVICE
           predicates:
             - Path=/api/v1/lecturas/**
 
         - id: pago_route
-          uri: lb://pago-service
+          uri: lb://PAGO-SERVICE
           predicates:
             - Path=/api/v1/pagos/**
 
         - id: balance_route
-          uri: lb://balance-service
+          uri: lb://BALANCE-SERVICE
           predicates:
             - Path=/api/v1/balances/**
 
         - id: reparacion_route
-          uri: lb://reparacion-service
+          uri: lb://REPARACION-SERVICE
           predicates:
             - Path=/api/v1/reparaciones/**
 
         - id: socios_route
-          uri: lb://socios-service
+          uri: lb://SOCIOS-SERVICE
           predicates:
             - Path=/api/v1/socios/**
 
         - id: notificacion_route
-          uri: lb://notificacion-service
+          uri: lb://NOTIFICACION-SERVICE
           predicates:
             - Path=/api/v1/notificaciones/**
 
