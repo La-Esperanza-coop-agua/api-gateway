@@ -63,6 +63,3 @@ eureka:
   client:
     service-url:
       defaultZone: https://eureka-server-y6q9.onrender.com/eureka/
-
-mi:
-  prueba: hola
