@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: ${PORT:8000}
 
 
 spring:
@@ -8,6 +8,10 @@ spring:
 
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: reportes_route
           uri: lb://REPORTE-SERVICE
@@ -18,7 +22,7 @@ spring:
           uri: lb://FACTURACION-SERVICE
           predicates:
             - Path=/api/v1/facturacion/**
- 
+
         - id: telemetria_route
           uri: lb://TELEMETRIA-SERVICE
           predicates:
@@ -63,6 +67,3 @@ eureka:
   client:
     service-url:
       defaultZone: https://eureka-server-y6q9.onrender.com/eureka/
-
-mi:
-  prueba: hola
