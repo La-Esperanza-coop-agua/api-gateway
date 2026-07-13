@@ -69,9 +69,3 @@ logging:
     org.springframework.cloud.gateway: TRACE
     org.springframework.cloud.loadbalancer: DEBUG
     reactor.netty: DEBUG
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: gateway,health,info
