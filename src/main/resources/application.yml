@@ -10,7 +10,7 @@ spring:
     gateway:
       routes:
         - id: reportes_route
-          uri: lb://reportes-service
+          uri: lb://reporte-service
           predicates:
             - Path=/api/v1/reportes/**
 
@@ -62,4 +62,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: https://eureka-server-y6q9.onrender.com/eureka/
+      defaultZone: http://localhost:8761/eureka/
